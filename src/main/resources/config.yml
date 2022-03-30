@@ -1,0 +1,40 @@
+# Test Configuration file
+testPlatform: Mobile # Valid values : Desktop , Mobile
+environment: local  #Valid values : local , plexus , saucelabs
+#Web Application Automation Configuration
+applicationUrl: https://academy-stage.walmart.com/
+browser: chrome
+#Webdriver Path. UnComment based on your OS
+driverPaths:
+  #MAC OSX: Uncomment the below driver Path for MAC OS and comment the others
+#  chromeDriverPath: src/test/resources/drivers/chromedriver
+#  firefoxDriverPath: src/test/resources/drivers/geckodriver
+  #LINUX OSX:  Uncomment the below driver Path for LINUX OS and comment the others
+  chromeDriverPath: src/test/resources/drivers/chromedriver_linux
+  firefoxDriverPath: src/test/resources/drivers/geckodriver_linux
+#WINDOWS OSX Uncomment the below driver Path for Windows OS and comment the others
+# chromeDriverPath: drivers/chromedriver
+# firefoxDriverPath: drivers/ffdriver
+
+
+#Mobile Application Automation Configuration
+#mobileDeviceType: iOS # Valid values {iOS , Android}
+appiumServerUrl: "http://0.0.0.0:4723/wd/hub"
+
+plexusParams:
+  plexusUserName:
+  plexusUserKey:
+  platformName: linux
+
+sauceLabsParams:
+  sauceUserName:
+  sauceAccessKey:
+  saucePlatformName: Windows 10
+  sauceBrowserVersion: latest
+  sauceParentTunnel:
+  sauceTunnelIdentifier:
+  sauceAppiumVersion: 1.22.1
+  sauceMobilePlatformName: Android
+  sauceAppID:
+  sauceDeviceName: Google Pixel 4a (5G) GoogleAPI Emulator
+  saucePlatformVersion: 12.0
